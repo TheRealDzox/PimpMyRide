@@ -6,6 +6,13 @@ import type { CollectionEntry } from "astro:content";
 import { capitalize } from "../../../utils";
 import { Button } from "@nextui-org/react";
 
+export const getStaticProps = () => {
+    
+    return [
+        { params: { slug: tag} }
+    ];
+}
+
 const { tag } = Astro.params;
 
 if(tag === undefined) {
@@ -17,7 +24,7 @@ const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
 
 const tagArticles = allBlogArticles.filter(article => article.data.tags.includes(tag));
 
-export const prerender = true;
+
 ---
 
 <Layout title="Tags">

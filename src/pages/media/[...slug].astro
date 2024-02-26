@@ -5,6 +5,14 @@ import { getEntry } from 'astro:content';
 import { formatDate } from "../../utils";
 import { Button } from "@nextui-org/react";
 
+
+export const getStaticProps = () => {
+    
+    return [
+        { params: { slug: slug} }
+    ];
+}
+
 const { slug } = Astro.params;
 
 if(slug === undefined) {
