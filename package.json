@@ -14,6 +14,7 @@
     "@astrojs/markdoc": "^0.9.0",
     "@astrojs/react": "^3.0.10",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.3.3",
     "@nextui-org/react": "^2.2.9",
     "@phosphor-icons/react": "^2.0.15",
     "@types/react": "^18.2.56",
