@@ -1,0 +1,31 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import ArticleCard from "../../../components/ArticleCard.astro";
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
+import { capitalize } from "../../../utils";
+import { Button } from "@nextui-org/react";
+
+const { tag } = Astro.params;
+
+if(tag === undefined) {
+  throw new Error('Tag is required');
+}
+
+const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
+  .sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const tagArticles = allBlogArticles.filter(article => article.data.tags.includes(tag));
+---
+
+<Layout title="Tags">
+    <main class="m-10">
+        <Button className="hover:bg-zinc-600 mb-5"><a href="/media">Back to Media</a></Button>
+        <h1 class="text-2xl pb-3">#{capitalize(tag)}</h1>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {tagArticles.map(article => (
+            <ArticleCard article={article} />
+        ))}
+        </div>
+    </main>
+</Layout>

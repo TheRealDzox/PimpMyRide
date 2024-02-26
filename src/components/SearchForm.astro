@@ -1,0 +1,25 @@
+---
+import { Input, Button } from "@nextui-org/react"
+import { MagnifyingGlass } from "@phosphor-icons/react"
+---
+
+<form id="search-form" class="flex items-center" action="/media/search">
+    <label for="search-input" class="sr-only">Search</label>
+    <div class="relative w-1/2 mr-10">
+      <Input 
+        type="text"
+        id="query"
+        name="query"
+        isClearable
+        radius="lg"
+        required
+        placeholder="Search articles..."
+      />
+    </div>
+    <Button
+      className="hover:bg-zinc-600 bg-zinc-800 p-7"
+      type="submit"
+    >
+      <MagnifyingGlass size={30} />
+    </Button>
+  </form>

@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Tags from "../../components/Tags.astro";
+import { getEntry } from 'astro:content';
+import { formatDate } from "../../utils";
+import { Button } from "@nextui-org/react";
+
+const { slug } = Astro.params;
+
+if(slug === undefined) {
+  throw new Error('Slug is required');
+}
+
+const entry = await getEntry('blog', slug);
+
+if(entry === undefined) {
+  return Astro.redirect('/404');
+}
+
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+    <main class="m-10">
+        <article>
+            <h1 class="text-4xl font-bold mb-2 text-center"> {entry.data.title}</h1>
+            <h3 class="text-lg mb-2 text-center">Written by {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
+            <Tags tags={entry.data.tags} />
+            <img src={'/images/' + entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl my-6" />
+            <Content />
+        </article>
+        <Button className="hover:bg-zinc-600"><a href="/media">Back</a></Button>
+    </main>
+</Layout>
+
+<style is:global>
+  p {
+    margin: 20px 0;
+  }
+
+  h2 {
+    margin: 20px 0;
+    font-size: 1.8rem;
+  }
+</style>
