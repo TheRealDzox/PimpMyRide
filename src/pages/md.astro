@@ -14,6 +14,8 @@ const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
 const mostRecentArticle: CollectionEntry<'blog'> = allBlogArticles[0];
 
 const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(1);
+
+export const prerender = true;
 ---
 <MainLayout>
   <!-- Top Grid -->

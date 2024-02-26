@@ -26,6 +26,8 @@ const searchResults = allBlogArticles.filter(article => {
 
     return titleMatch || bodyMatch || slugMatch
 });
+
+export const prerender = true;
 ---
 
 <Layout title="Search Results">
