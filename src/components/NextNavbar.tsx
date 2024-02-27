@@ -1,17 +1,11 @@
 "use client"
 import React from "react";
 import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
-import { Radio, GithubLogo } from "@phosphor-icons/react";
+import { GithubLogo } from "@phosphor-icons/react";
 import PMR from "../images/brand/PimpMyRide.png"
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const menuItems = [
-    "Home",
-    "Media",
-    "About",
-  ];
 
   return (
     <Navbar
@@ -59,8 +53,6 @@ export default function App() {
         <Link href="https://github.com/TheRealDzox/PimpMyRide" color="foreground">
             <GithubLogo size={24} />
         </Link>
-
-        <Radio size={24} />
       </NavbarContent>
 
       <NavbarMenu>

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PMR from '../images/brand/PimpMyRide.png';
 import { Divider } from '@nextui-org/react';
 import { Image } from 'astro:assets'
+import { Files, CarProfile } from '@phosphor-icons/react';
 
 export const prerender = true;
 ---
@@ -10,16 +11,16 @@ export const prerender = true;
 <Layout title="Welcome to PimpMyRide!">
     <main class="m-10">
         <section class="flex flex-col items-center justify-center lg:mt-2">
-            <video class="z-0 absolute lg:mt-24 w-full" autoplay loop muted src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" />
-            <img class="z-10 col-span-12 px-20 lg:px-0 lg:mt-24"
+            <video class="z-0 absolute lg:mt-24 w-full" autoplay loop muted src="https://storage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" />
+            <img class="z-10 col-span-12 px-20 md:px-10 md:mt-12 lg:px-0 lg:mt-24"
                         alt="Pimp My Ride"
                         src={PMR.src}
                         width={300}
                         height={300}
                     />
         </section>
-        <section class="grid grid-cols-12 mt-20 lg:mt-96 mb-12 lg:mb-24">
-            <div class="text-center col-span-12 lg:text-left lg:col-span-8">
+        <section class="grid grid-cols-12 mt-20 sm:mt-48 md:mt-48 lg:mt-72 xl:mt-96 mb-12">
+            <div class="text-center col-span-12 lg:text-left lg:col-span-6">
                 <h1 class="text-4xl font-bold">What is PimpMyRide?</h1>
                 <br />
                 <p>PimpMyRide is not just a brand</p>
@@ -27,13 +28,13 @@ export const prerender = true;
                     Dive into the world of RC cars and unleash your creativity like never before. 
                     Whether you're a seasoned content creator or just getting started, PimpMyRide is here to elevate your automotive storytelling.</p>
             </div>
-            <div class="col-span-12 px-24 pt-8 lg:col-span-4 lg:px-48 lg:pt-16 lg:pb-20">
+            <div class="col-span-12 px-24 pt-8 md:px-60 lg:col-span-6 lg:px-20 lg:pb-20">
                 <Image src={PMR} alt="PimpMyRide" width={300} height={300}/>
             </div>
         </section>
         <Divider />
-        <section class="grid grid-cols-12 mt-12 lg:mt-24 mb-12 lg:mb-24">
-            <div class="text-center col-span-12 lg:text-left lg:col-span-8">
+        <section class="grid grid-cols-12 mt-12 lg:mt-24 mb-12">
+            <div class="text-center col-span-12 lg:text-left lg:col-span-6">
                 <h1 class="text-4xl font-bold">Our Blog</h1>
                 <br />
                 <p>Welcome to the Official PimpMyRide Blog – Your Ultimate Destination for Everything about our Projects!</p>
@@ -41,13 +42,13 @@ export const prerender = true;
                     The Official PimpMyRide Blog is your go-to source for PimpMyRide content, 
                     featuring the latest news, tips, and stories from us.</p>
             </div>
-            <div class="col-span-12 px-24 pt-8 lg:col-span-4 lg:px-48 lg:pt-16 lg:pb-20">
-                <Image src={PMR} alt="PimpMyRide" width={300} height={300}/>
+            <div class="col-span-12 px-24 pt-8 sm:px-52 md:px-80 lg:col-span-6 lg:px-28 lg:pb-20">
+                <Files size={96} />
             </div>
         </section>
         <Divider />
         <section class="grid lg:grid-cols-12 mt-12 lg:mt-24">
-            <div class="text-center col-span-12 lg:text-left lg:col-span-8">
+            <div class="text-center col-span-12 lg:text-left lg:col-span-6">
                 <h1 class="text-4xl font-bold">RC-Car Project</h1>
                 <br />
                 <p>Introducing the PimpMyRide RC Car Lightbar Project.</p>
@@ -55,8 +56,8 @@ export const prerender = true;
                     crafted to take your nighttime adventures to a whole new level. 
                     Illuminate the track, showcase your unique style, and stand out in the world of RC enthusiasts.</p>
             </div>
-            <div class="col-span-12 px-24 pt-8 lg:col-span-4 lg:px-48 lg:pt-16 lg:pb-20">
-                <Image src={PMR} alt="PimpMyRide" width={300} height={300}/>
+            <div class="col-span-12 px-24 pt-8 sm:px-52 md:px-80 lg:col-span-6 lg:px-28 lg:pb-20">
+                <CarProfile size={96} />
             </div>
         </section>
     </main>

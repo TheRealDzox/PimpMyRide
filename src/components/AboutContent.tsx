@@ -1,6 +1,5 @@
 "use client"
-import React from 'react';
-import { Card, CardFooter, Button, Divider,  } from '@nextui-org/react';
+import { Card, CardFooter, Divider,  } from '@nextui-org/react';
 
 import Fabian from '../images/team/Fabian.jpg';
 import Christian from '../images/team/Christian.jpg';
@@ -23,7 +22,7 @@ export default function AboutContent() {
             <h1 className="text-4xl font-bold text-center">Our Team</h1>
         </div>
         <section className="grid grid-cols-12 grid-rows items-center justify-center gap-4 py-8 md:py-10">
-            <div className="col-span-8 col-start-3 lg:col-start-6 lg:col-span-2 text-center mt-4">
+            <div className="col-span-8 col-start-3 sm:col-span-4 sm:col-start-5 lg:col-start-6 lg:col-span-2 text-center mt-4">
                 <Card
                     isFooterBlurred
                     radius="lg"
@@ -47,7 +46,7 @@ export default function AboutContent() {
         </section>
         <Divider />
         <section className="grid grid-cols-12 grid-rows items-center justify-center gap-4 py-8 md:py-10">
-            <div className="col-span-8 col-start-3 lg:col-start-5 lg:col-span-2 text-center mt-4">
+            <div className="col-span-8 col-start-3 sm:col-span-4 sm:col-start-5 lg:col-start-5 lg:col-span-2 text-center mt-4">
                 <Card
                 isFooterBlurred
                 radius="lg"
@@ -68,7 +67,7 @@ export default function AboutContent() {
                     <h2>Producer</h2>
                 </div>
             </div>
-            <div className="col-span-8 col-start-3 lg:col-start-7 lg:col-span-2 text-center mt-4">
+            <div className="col-span-8 col-start-3 sm:col-span-4 sm:col-start-5 lg:col-start-7 lg:col-span-2 text-center mt-4">
                 <Card
                 isFooterBlurred
                 radius="lg"
@@ -89,7 +88,7 @@ export default function AboutContent() {
                     <h2>System Technician</h2>
                 </div>
             </div>
-            <div className="col-span-8 col-start-3 lg:col-start-5 lg:col-span-2 text-center mt-4">
+            <div className="col-span-8 col-start-3 sm:col-span-4 sm:col-start-5 lg:col-start-5 lg:col-span-2 text-center mt-4">
                 <Card
                 isFooterBlurred
                 radius="lg"
@@ -110,7 +109,7 @@ export default function AboutContent() {
                     <h2>Programmer</h2>
                 </div>
             </div>
-            <div className="col-span-8 col-start-3 lg:col-start-7 lg:col-span-2 text-center mt-4">
+            <div className="col-span-8 col-start-3 sm:col-span-4 sm:col-start-5 lg:col-start-7 lg:col-span-2 text-center mt-4">
                 <Card
                 isFooterBlurred
                 radius="lg"
