@@ -4,6 +4,7 @@ import PMR from '../images/brand/PimpMyRide.png';
 import { Divider } from '@nextui-org/react';
 import { Image } from 'astro:assets'
 import { Files, CarProfile } from '@phosphor-icons/react';
+import Video from '../images/brand/MainVideo.mp4';
 
 export const prerender = true;
 ---
@@ -11,7 +12,7 @@ export const prerender = true;
 <Layout title="Welcome to PimpMyRide!">
     <main class="m-10">
         <section class="flex flex-col items-center justify-center lg:mt-2">
-            <video class="z-0 absolute lg:mt-24 w-full" autoplay loop muted src="https://storage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" />
+            <video class="z-0 absolute lg:mt-24 w-full" autoplay loop muted src={Video} />
             <img class="z-10 col-span-12 px-20 md:px-10 md:mt-12 lg:px-0 lg:mt-24"
                         alt="Pimp My Ride"
                         src={PMR.src}
