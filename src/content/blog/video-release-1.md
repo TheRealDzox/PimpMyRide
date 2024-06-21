@@ -3,7 +3,7 @@ title: 'Video Release #1'
 pubDate: 2024-05-27
 author: 'PimpMyRide'
 image: 'Video-1.png'
-tags: ['Video']
+tags: ['video']
 slug: video-release-1
 ---
 
