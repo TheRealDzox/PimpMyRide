@@ -2,7 +2,7 @@
 title: "Building the RC-Car"
 pubDate: 2024-06-03
 author: "Dominik Leitner"
-image: ""
+image: "Building.jpg"
 tags: ["RC-Car"]
 slug: building-the-rc-car
 ---

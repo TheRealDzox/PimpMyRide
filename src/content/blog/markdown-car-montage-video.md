@@ -1,6 +1,6 @@
 ---
 title: "Creating the car-montage Video"
-pubDate: 2024-05-06
+pubDate: 2024-06-05
 author: "Christian Seebacher"
 image: "Montage.png"
 tags: ["video"]
